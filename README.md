@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+steps:
 
-Things you may want to cover:
+1. `gem 'sassc-rails'`, `gem 'bootstrap'`
+2. add `config.sass.inline_source_maps = true`, `config.sass.line_comments = false`, run `rm -r tmp/cache/assets`
+   to: config/environments/development.rb
 
-* Ruby version
+3. Delete app/assets/stylesheets/application.css
+4. Create new app/assets/stylesheets/application.scss and add line: `@import "bootstrap";`
+5. In config/initializers/assets.rb, add: `Rails.application.config.assets.precompile += %w[application.scss]`
 
-* System dependencies
+6. Run below commands:
 
-* Configuration
+- bin/importmap pin jquery
+- bin/importmap pin @popperjs/core
+- bin/importmap pin bootstrap
 
-* Database creation
+7. Add this to app/javascript/application.js
+   `import "jquery";`
+   `import "@popperjs/core";`
+   `import "bootstrap";`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Popper.js: process not defined issue- https://github.com/rails/importmap-rails/issues/65
