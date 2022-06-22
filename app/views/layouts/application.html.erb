@@ -7,11 +7,12 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%# Temparary fix for process not defined popperjs in createPopper.js tag%>
+    <script>
+      window.process = { env: {} }
+    </script>
   </head>
   <body>
     <%= yield %>
-    <% if abd %>
-      <h2>asdlk</h2>
-    <% end %>
   </body>
 </html>
