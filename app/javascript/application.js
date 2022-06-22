@@ -2,7 +2,10 @@
 import "@hotwired/turbo-rails";
 import "controllers";
 
-import "jquery";
+import jquery from "jquery";
 import "@popperjs/core";
 import "bootstrap";
 import "@fortawesome/fontawesome-free";
+import "./new";
+
+window.$ = jquery; // access '$' on custom js files

@@ -27,3 +27,11 @@
 
 1. run: `bin/importmap pin @fortawesome/fontawesome-free`
 2. In app/javascript/application.js, add `import "@fortawesome/fontawesome-free"`
+
+## Steps to add Material Design icons:
+
+1. Add `gem "rails_material_design_icons"`
+
+## jQuery globally not available issue:
+
+- Use: `import jquery from "jquery";` and `window.$ = jquery;` with `window.onload = function () {// your code }`
