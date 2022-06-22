@@ -5,3 +5,4 @@ import "controllers";
 import "jquery";
 import "@popperjs/core";
 import "bootstrap";
+import "@fortawesome/fontawesome-free";

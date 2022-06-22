@@ -1,6 +1,6 @@
 # README
 
-steps:
+## Steps to add bootstrap:
 
 1. `gem 'sassc-rails'`, `gem 'bootstrap'`
 2. add `config.sass.inline_source_maps = true`, `config.sass.line_comments = false`, run `rm -r tmp/cache/assets`
@@ -22,3 +22,8 @@ steps:
    `import "bootstrap";`
 
 - Popper.js: process not defined issue- https://github.com/rails/importmap-rails/issues/65
+
+## Steps to add fontawesome:
+
+1. run: `bin/importmap pin @fortawesome/fontawesome-free`
+2. In app/javascript/application.js, add `import "@fortawesome/fontawesome-free"`
